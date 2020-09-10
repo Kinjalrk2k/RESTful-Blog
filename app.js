@@ -2,6 +2,7 @@ const { response } = require("express");
 
 var express = require("express"),
   bodyParser = require("body-parser"),
+  expressSanitizer = require("express-sanitizer"),
   mongoose = require("mongoose"),
   methodOverride = require("method-override"),
   app = express();
@@ -18,6 +19,7 @@ mongoose
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(expressSanitizer());
 app.use(methodOverride("_method"));
 mongoose.set("useFindAndModify", false);
 
@@ -55,6 +57,10 @@ app.get("/blogs/new", function (req, res) {
 
 // CREATE route
 app.post("/blogs", function (req, res) {
+  req.body.blog.body = req.sanitize(req.body.blog.body);
+  if(req.body.blog.image === ""){
+    req.body.blog.image = "/placeholder-image.png"
+  }
   Blog.create(req.body.blog, function (err, newBlog) {
     if (err) {
       res.render("new");
@@ -88,6 +94,10 @@ app.get("/blogs/:id/edit", function (req, res) {
 
 // UPDATE route
 app.put("/blogs/:id", function (req, res) {
+  req.body.blog.body = req.sanitize(req.body.blog.body);
+  if(req.body.blog.image === ""){
+    req.body.blog.image = "/placeholder-image.png"
+  }
   Blog.findByIdAndUpdate(req.params.id, req.body.blog, function (err, updatedBlog) {
     if (err) {
       res.redirect("/blogs");

@@ -32,6 +32,9 @@
 - Destroy
     - Add Destroy Route
     - Edit and Destroy Links
+- Final Updates
+    - Sanitize Blog body
+    - Style Index
 
 ## Few Notes on REST
 
