@@ -1,4 +1,6 @@
 # RESTful Blog
+> This is a part of Colt Steele's The Web Developer Bootcamp Course on Udemy
+> Section 31: RESTful Routing
 
 ## Objectives
 > Using Semantic UI
@@ -7,10 +9,12 @@
     - Create the blog model
     - Add INDEX route and the template
     - Add Simple Navbar
+- Basic Layout
+    - Add Header and Footer Partials
+    - Include Semantic UI
+    - Add Simple Nav
 
 ## Few Notes on REST
-> This is a part of Colt Steele's The Web Developer Bootcamp Course on Udemy
-> Section 31: RESTful Routing
 
 - REST stands for REpresentational State Transfer
 - REST is a Pattern of defining routes: 
