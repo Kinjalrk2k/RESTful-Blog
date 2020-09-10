@@ -23,6 +23,12 @@
     - Add SHOW template
     - Add links to show page
     - Style the show template
+- Edit/Update
+    - Add EDIT route
+    - Add EDIT form
+    - Add UPDATE route
+    - Add UPDATE form
+    - Add Method-Override 
 
 ## Few Notes on REST
 
@@ -31,6 +37,17 @@
     - A mapping between HTTP routes and CRUD
     - CRUD: CREATE, READ, UPDATE and DESTROY
     - RESTful routes is conventional and reliable over our own defined routes
+
+**Note:** HTML forms don't support PUT request. They only support POST and GET request.
+
+*Workraound?*
+**Method-Override**: In the form-action, put the query string ```?_method=PUT```. This overries the ```method=POST``` in the form.
+```npm install method-override -- save```
+```js
+var methodOverride = require("method-override");
+app.use(methodOverride("_method"));
+```
+
 
 #### RESTful Routes Table
 *The 7 RESTful routes with a* :dog: *example*
