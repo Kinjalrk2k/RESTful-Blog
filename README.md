@@ -37,7 +37,7 @@ A simple Blog application based on RESTful routing and Semantic UI
     - Sanitize Blog body
     - Style Index
 
-## Few Notes on REST
+## Notes on REST
 
 - REST stands for REpresentational State Transfer
 - REST is a Pattern of defining routes: 
@@ -49,6 +49,7 @@ A simple Blog application based on RESTful routing and Semantic UI
 
 *Workraound?*
 **Method-Override**: In the form-action, put the query string ```?_method=PUT```. This overries the ```method=POST``` in the form.
+
 ```npm install method-override -- save```
 ```js
 var methodOverride = require("method-override");
@@ -58,7 +59,7 @@ app.use(methodOverride("_method"));
 
 #### RESTful Routes Table
 *The 7 RESTful routes with a* :dog: *example*
-| Name | Path | HTTP Verb | Purpose | Mongoose Methos |
+| Name | Path | HTTP Verb | Purpose | Mongoose Methods |
 |------|------|-----------|---------|-----------------|
 | Index | ```/dogs``` | GET | List all dogs | ```Dog.find()``` |
 | New | ```/dogs/new``` | GET | Show new dog form |  |
