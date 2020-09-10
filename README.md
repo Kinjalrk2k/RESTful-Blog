@@ -13,6 +13,11 @@
     - Add Header and Footer Partials
     - Include Semantic UI
     - Add Simple Nav
+- Putting C in CRUD
+    - Add NEW route
+    - Add NEW template
+    - Add CREATE route
+    - Add CREATE template
 
 ## Few Notes on REST
 
