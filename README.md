@@ -29,6 +29,9 @@
     - Add UPDATE route
     - Add UPDATE form
     - Add Method-Override 
+- Destroy
+    - Add Destroy Route
+    - Edit and Destroy Links
 
 ## Few Notes on REST
 
