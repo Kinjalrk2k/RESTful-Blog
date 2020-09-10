@@ -1,5 +1,13 @@
 # RESTful Blog
 
+## Objectives
+> Using Semantic UI
+- Blog Index
+    - Setup the Blog App
+    - Create the blog model
+    - Add INDEX route and the template
+    - Add Simple Navbar
+
 ## Few Notes on REST
 > This is a part of Colt Steele's The Web Developer Bootcamp Course on Udemy
 > Section 31: RESTful Routing
