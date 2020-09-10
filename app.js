@@ -61,6 +61,17 @@ app.post("/blogs", function (req, res) {
   });
 });
 
+// SHOW route
+app.get("/blogs/:id", function (req, res) {
+  Blog.findById(req.params.id, function (err, foundBlog) {
+    if (err) {
+      res.redirect("/blogs");
+    } else {
+      res.render("show", { blog: foundBlog });
+    }
+  });
+});
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, function () {
   console.log(`The RESTful Blog App Server is running on port ${PORT}`);

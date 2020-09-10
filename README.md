@@ -18,6 +18,11 @@
     - Add NEW template
     - Add CREATE route
     - Add CREATE template
+- SHOWtime xD
+    - Add SHOW route
+    - Add SHOW template
+    - Add links to show page
+    - Style the show template
 
 ## Few Notes on REST
 
